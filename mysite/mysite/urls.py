@@ -6,5 +6,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("polls/", include("polls.urls")),
     path("", RedirectView.as_view(pattern_name="polls:index"), name="root"),
-
 ]
