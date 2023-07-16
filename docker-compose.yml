@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  mysite:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    ports:
+      - "8080:8000"
+
+    volumes:
+      - ./mysite:/code
+
+    command: python /code/manage.py runserver 0.0.0.0:8000
+
+
